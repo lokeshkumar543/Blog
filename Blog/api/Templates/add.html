@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter details</title>
+</head>
+<body>
+
+
+    <form method="post" action="#" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div><label>Title</label>
+            <input type="text" name="title" placeholder="Enter Title" required></div>
+        <br>
+        <div><label>Description</label>
+            <input type="text" name="description" placeholder="Enter Discription"></div>
+        <br>
+            <div class="form-group">
+                <label>Image</label>
+                <input type="file" name="image"/>
+            </div>
+        <br>
+        <div><label>Name</label>
+            <input type="text" name="authorname" placeholder="Enter Name"required></div>
+        <br>
+        <div><label>Email</label>
+            <input type="email" name="authoremail" placeholder="Enter Email"required></div>
+        <br>
+        <div><label>Contact</label>
+            <input type="number" name="authorphone" placeholder="Enter contact"required></div>
+        <br>
+        <div><button type="submit">Submit</button>
+            <button type="reset">reset</button></div>
+    </form>
+<a href="/">Home</a>
+</body>
+</html>

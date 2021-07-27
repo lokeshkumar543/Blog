@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+<table border="1" bgcolor="lightblue">
+    <tr>
+        <td><b>ID</b></td>                  <!-- <td> defines the column name -->
+        <td><b>Title</b></td>
+        <td><b>Description</b></td>
+        <td><b>image</b></td>
+        <td><b>Name</b></td>
+        <td><b>Email</b></td>
+        <td><b>Contact</b></td>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td><b>{{i.id}}</b></td>
+        <td>{{i.title}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.image.url}}</td>
+<!--        <td>-->
+<!--            <div>-->
+<!--                <img src="{{i.image.url}}">-->
+<!--            </div>-->
+<!--        </td>-->
+
+        <td>{{i.author_name}}</td>
+        <td>{{i.author_email}}</td>
+        <td>{{i.author_phone}}</td>
+        <td><a href="delete/{{i.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+    <a href="add-blog/">Add</a>
+</body>
+</html>
